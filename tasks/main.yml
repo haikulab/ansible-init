@@ -1,0 +1,21 @@
+---
+
+- name: Upgrade System Packages
+  apt: force=yes update_cache=yes upgrade=yes
+  register: system_updated
+
+# - debug: msg="{{ system_updated }}"
+
+- name: Install System Packages
+  when: system_updated is success
+  apt: pkg={{ system_packages }} state=present force=yes update_cache=yes
+
+# - debug: msg="{{ system_packages_installed }}"
+
+- name: Remove useless packages from the cache
+  when: system_updated is success
+  apt: autoclean=yes
+
+- name: Remove dependencies that are no longer required
+  when: system_updated is success
+  apt: autoremove=yes

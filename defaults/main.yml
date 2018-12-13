@@ -1,0 +1,23 @@
+---
+# default variables
+# please overwrite in the playbook.yml
+
+system_packages:
+  - aptitude
+  - build-essential
+  - curl
+  - htop
+  - git
+  - gpart
+  - nscd
+  - ntp
+  - python-pip
+  - unattended-upgrades
+  - sudo
+  - supervisor
+  - tree
+  - vim
+  - whois
+  - wget
+  - zfsutils-linux
+  - zsh

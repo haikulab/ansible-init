@@ -1,0 +1,15 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: haikulab
+  description: initial server serup
+  company: "Haiku Lab Limited"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.5
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  galaxy_tags:
+    - system
